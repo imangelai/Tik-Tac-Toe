@@ -26,7 +26,7 @@
                         <div v-for="(row, rowIndex) in boardCells" :key="rowIndex">
 
                             <div v-for="(cell, colIndex) in row" :key="colIndex"
-                                class="flex justify-center items-center text-5xl lg:text-7xl font-semibold w-20 h-20 lg:w-25 lg:h-25 m-2 lg:m-4 rounded-lg bg-yellow-50 hover:bg-yellow-200 hover:scale-105 cursor-pointer duration-100"
+                                class="flex justify-center items-center text-5xl lg:text-7xl font-semibold w-20 h-20 lg:w-25 lg:h-25 m-3 lg:m-4 rounded-lg bg-yellow-50 hover:bg-yellow-200 hover:scale-105 cursor-pointer duration-100"
                                 @click="cellClick(rowIndex, colIndex)" :class="{'text-red-500': cell === 'X',
                                         'text-lime-500': cell === 'O', 
                                         'cursor-not-allowed': cell !== '' || winner}">
