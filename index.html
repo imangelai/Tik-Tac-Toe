@@ -14,19 +14,19 @@
 
     <div id="app">
 
-        <div class="flex justify-center items-center h-screen bg-gray-100 bg-[url('https://i.pinimg.com/1200x/08/51/e3/0851e3a63e89efa69d67ffb8d5692fdf.jpg')] bg-cover bg-center">
+        <div class="flex justify-center items-center h-screen bg-gray-100 bg-[url('https://i.pinimg.com/1200x/23/b6/e4/23b6e454fc8687c62acfc1fbaaa646f6.jpg')] bg-cover bg-center">
             <div>
                 <div class="flex-col">
 
                     <h1 v-if="message" class="text-2xl text-white font-semibold text-center m-10 font-mono">{{message}}
                     </h1>
 
-                    <div class="grid grid-cols-3 rounded-2xl bg-gray-900">
+                    <div class="grid grid-cols-3 rounded-2xl bg-rose-500">
 
                         <div v-for="(row, rowIndex) in boardCells" :key="rowIndex">
 
                             <div v-for="(cell, colIndex) in row" :key="colIndex"
-                                class="flex justify-center items-center text-7xl font-semibold w-25 h-25 m-4 rounded-lg bg-yellow-50 hover:bg-yellow-200 hover:scale-105 cursor-pointer duration-100"
+                                class="flex justify-center items-center text-7xl font-semibold w-20 h-20 lg:w-25 lg:h-25 m-4 rounded-lg bg-yellow-50 hover:bg-yellow-200 hover:scale-105 cursor-pointer duration-100"
                                 @click="cellClick(rowIndex, colIndex)" :class="{'text-red-500': cell === 'X',
                                         'text-lime-500': cell === 'O', 
                                         'cursor-not-allowed': cell !== '' || winner}">
@@ -39,7 +39,7 @@
 
                     <div class="flex justify-center items-center">
                         <button @click="restartGame"
-                            class="bg-emerald-300 px-5 py-3 text-xl rounded-lg hover:bg-emerald-500 hover:text-white cursor-pointer mt-10 hover:scale-105 duration-100">Restart</button>
+                            class="bg-emerald-300 px-3 py-2 lg:px-5 lg:py-3 text-xl rounded-lg hover:bg-emerald-500 hover:text-white cursor-pointer mt-10 hover:scale-105 duration-100">Restart</button>
                     </div>
 
                 </div>
